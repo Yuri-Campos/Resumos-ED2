@@ -1,0 +1,11 @@
+Para repartir um nó em uma árvore B, siga os seguintes passos:
+
+Verifique se o nó a ser repartido excede a capacidade máxima permitida para um nó na árvore B. Se o nó não exceder a capacidade, não é necessário reparti-lo.
+
+Escolha um valor no meio do nó a ser repartido. Esse valor será promovido para o nó pai e as chaves menores serão colocadas em um novo nó à esquerda, enquanto as chaves maiores serão colocadas em um novo nó à direita.
+
+Se o nó a ser repartido for um nó raiz, crie um novo nó raiz com o valor promovido e os dois novos nós criados no passo anterior serão seus filhos.
+
+Caso contrário, insira o valor promovido no nó pai do nó a ser repartido e ajuste as referências de seus filhos para incluir os novos nós criados.
+
+Se o nó pai também exceder sua capacidade máxima, repita o processo de repartição recursivamente, subindo na árvore até chegar a um nó que possa acomodar uma nova chave.
